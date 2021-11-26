@@ -1,5 +1,18 @@
 {
   "extends": [
     "config:base"
+  ],
+  "postUpdateOptions": [
+    "gomodTidy"
+  ],
+  "packageRules": [
+    {
+      "groupName": "digest-minor-patch",
+      "matchUpdateTypes": [
+        "digest",
+        "minor",
+        "patch"
+      ]
+    }
   ]
 }
