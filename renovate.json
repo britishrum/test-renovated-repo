@@ -13,6 +13,16 @@
         "minor",
         "patch"
       ]
+    },
+    {
+      "matchPackageNames": [
+        "github.com/britishrum/test-renovated-repo-dep"
+      ],
+      // TODO v0.0.2 has been published and deleted shortly afterwards,
+      // but Renovate still attempts to update to that version.
+      // Delete this rule when v0.0.2 is published again.
+      "allowedVersions": "!/v0\\.0\\.2$/",
+      "enabled": false
     }
   ]
 }
